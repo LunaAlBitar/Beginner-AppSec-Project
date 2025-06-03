@@ -46,3 +46,18 @@ JWT_EXPIRES_IN=1h
 
 ### 3. Run the server
 node server.js
+
+
+### 4. **Security Measures**
+- Implement **input validation** and **output sanitization** to prevent common attacks like **SQL injection** and **XSS**.
+- Use **secure HTTP headers** (e.g., Content Security Policy, X-Frame-Options).
+- Encrypt sensitive data with **AES** or other algorithms, ensuring that you never store plaintext sensitive information in the database.
+- Enable **HTTPS** using SSL/TLS certificates for all communications.
+
+### 5. **Version Control Best Practices**
+- Use meaningful commit messages.
+- Commit often with small changes.
+- Use `.gitignore` to prevent sensitive or unnecessary files (e.g., `node_modules/`) from being tracked.
+
+This setup will ensure proper version control and a well-documented, secure, and maintainable deployment process for your application.
+
