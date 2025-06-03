@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="validation.js" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Login</h2>
+    <form id="inputForm" action="/register" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required maxlength="30" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required maxlength="100" autocomplete="new-password" />
+      </div>
+    <div class="form-group">
+      <!-- reCAPTCHA widget goes here -->
+      <div class="g-recaptcha" data-sitekey="6LcQT1ArAAAAALZPk5u7uvtZJQQXqt2m4cLg1mv8"></div>
+    </div>        <button type="submit">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+    <div id="output"></div>
+  </div>
+</body>
+</html>

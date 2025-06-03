@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <!--
+    client-side validation HTML
+    ex:maxlength="30"
+       minlength="8" maxlength="100" 
+  -->
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="inputForm" action="/register" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required maxlength="30" />  
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required maxlength="100" />
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="Male" required /> Male
+          <input type="radio" id="female" name="gender" value="Female" required /> Female
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="8" maxlength="100" autocomplete="new-password" />
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" required minlength="8" maxlength="100" autocomplete="new-password" />
+      </div>
+    <div class="form-group">
+      <!-- reCAPTCHA widget goes here -->
+      <div class="g-recaptcha" data-sitekey="6LcQT1ArAAAAALZPk5u7uvtZJQQXqt2m4cLg1mv8"></div>
+    </div>      
+    <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+    <div id="output"></div>
+  </div>
+  <!-- Validation & Sanitization Scripts -->
+  <script src="validation.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.2/purify.min.js"></script>
+</body>
+</html>
