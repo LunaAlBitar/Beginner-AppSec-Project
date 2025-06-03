@@ -32,22 +32,17 @@ A simple yet secure user authentication system using Node.js, Express, and vanil
 
 ---
 
-##  Setup Instructions
+##  Setup Instruction
 
-### 1.clone the reposity
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-
-### 2. Install dependencies
+### 1. Install dependencies
 npm install
 
-### 3. Environment variables
+### 2. Environment variables
 AES_KEY=your_64_char_hex_key
 AES_IV=your_32_char_hex_iv
 RECAPTCHA_SECRET_KEY=your_google_recaptcha_secret
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRES_IN=1h
 
-### 4. Run the server
+### 3. Run the server
 node server.js
