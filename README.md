@@ -18,17 +18,16 @@ A simple yet secure user authentication system using Node.js, Express, and vanil
 
 ##  Features
 
-- User registration with:
-  - Input validation (client & server)
-  - Password strength enforcement
-  - Google reCAPTCHA verification
-  - AES-encrypted email storage
-- Secure login with:
-  - Rate limiting (max 5 attempts/15 mins)
-  - JWT-based authentication
-- Protected routes with token-based access
-- Input sanitization using DOMPurify (against XSS)
-- In-memory user storage (for demonstration purposes)
+-  **Form Validation (client & server side)**
+-  **Email encryption using AES-256**
+-  **Password hashing using bcrypt**
+-  **JWT Authentication**
+-  **Rate Limiting** (to prevent brute force)
+-  **Helmet for secure HTTP headers**
+-  **CSP (Content Security Policy)**
+-  **Role-based Access Control (RBAC)**
+-  **Google reCAPTCHA v2 integration**
+
 
 ---
 
